@@ -1,0 +1,66 @@
+$borders: solid black 2px;
+$spacings: 35px;
+
+body {
+	background-color: rgb(160, 160, 255);
+	width: 100vw;
+	height: 100vh;
+	height: auto;
+	overflow-x: hidden;
+
+	#content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+header {
+	background-color: white;
+	display: flex;
+	justify-content: space-evenly;
+	width: 100vw;
+	height: 10%;
+	border: $borders;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#content-card {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: $spacings;
+	margin-top: $spacings;
+	margin-bottom: $spacings;
+	padding-top: $spacings;
+	padding-bottom: $spacings;
+	width: 60%;
+	height: auto;
+	border: $borders;
+}
+
+section {
+	border: $borders;
+	width: fit-content;
+	padding: 10px;
+}
+
+footer {
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	border: $borders;
+}
+
+.sub-title {
+	color: red;
+}
