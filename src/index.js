@@ -25,11 +25,11 @@ function contentCardComponent(...sectionNames) {
 	contentCard.id = "content-card";
 
 	for (let i = 0; i < sectionNames.length; i++) {
-		// Creates Section:
+		// Creates a Section for Content Card:
 		let section = document.createElement("section");
 		section.id = sectionNames[i].split(" ").join("");
 
-		// Creates Subtitle for Section:
+		// Creates a Subtitle for Section:
 		let subTitle = document.createElement("h2");
 		subTitle.classList.add("sub-title");
 		subTitle.innerText = sectionNames[i];
@@ -65,17 +65,44 @@ whoAreWeSection.append(whoAreWeContent());
 // Hours Section:
 const hoursSection = document.getElementById("Hours");
 
-let hours = {
-	weekdays: {
-		days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+let hours = [
+	{
+		days: "Monday - Thursday",
 		hours: "9:30AM - 8PM",
 	},
-	fridays: {
-		days: ["Friday"],
+	{
+		days: "Friday",
 		hours: "9:30AM - 1:30PM",
 	},
-	weekends: {
-		days: ["Saturday", "Sunday"],
+	{
+		days: "Saturday & Sunday",
 		hours: "Closed",
 	},
-};
+];
+
+function hoursContent() {
+	let hoursContainer = document.createElement("ul");
+
+	for (let i = 0; i < hours.length; i++) {
+		let hoursItem = document.createElement("li");
+		hoursItem.classList.add("hours-Item");
+		hoursItem.innerText = "👉 " + `${hours[i].days} || ${hours[i].hours}`;
+		hoursContainer.append(hoursItem);
+	}
+
+	return hoursContainer;
+}
+
+hoursSection.append(hoursContent());
+
+// Directions Section:
+const directionsSection = document.getElementById("Directions");
+
+function directionsContent() {
+	let paragraph = document.createElement("p");
+	paragraph.innerText = "Road 123, Toronto, Ontario";
+
+	return paragraph;
+}
+
+directionsSection.append(directionsContent());

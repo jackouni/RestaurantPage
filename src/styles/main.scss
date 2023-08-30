@@ -1,5 +1,21 @@
-$borders: solid black 2px;
 $spacings: 35px;
+
+@mixin borders {
+	border: solid black 2px;
+	border-radius: 10px;
+}
+
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@mixin even-spacings {
+	padding: $spacings;
+	margin: $spacings;
+	gap: $spacings;
+}
 
 body {
 	background-color: rgb(160, 160, 255);
@@ -9,9 +25,7 @@ body {
 	overflow-x: hidden;
 
 	#content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		@include flex-column;
 		width: 100%;
 		height: 100%;
 	}
@@ -23,43 +37,41 @@ header {
 	justify-content: space-evenly;
 	width: 100vw;
 	height: 10%;
-	border: $borders;
+	@include borders;
 }
 
 main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
+	@include flex-column;
 }
 
 #content-card {
+	@include flex-column;
+	@include even-spacings;
+	@include borders;
+
 	background-color: white;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: $spacings;
-	margin-top: $spacings;
-	margin-bottom: $spacings;
-	padding: $spacings;
 	width: 60%;
 	height: auto;
-	border: $borders;
-}
 
-section {
-	border: $borders;
-	width: fit-content;
-	padding: 10px;
+	section {
+		@include flex-column;
+		@include borders;
+		width: fit-content;
+		padding: 10px;
+	}
 }
 
 footer {
-	background-color: white;
+	@include borders;
 	display: flex;
 	justify-content: center;
-	border: $borders;
+	background-color: white;
 }
 
 .sub-title {
 	color: red;
+}
+
+li {
+	list-style-type: none;
 }
