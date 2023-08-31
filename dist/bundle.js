@@ -16,7 +16,7 @@
   \***********************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `body {\n  background-color: rgb(160, 160, 255);\n  width: 100vw;\n  height: 100vh;\n  height: auto;\n  overflow-x: hidden;\n}\nbody #content {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  height: 100%;\n}\n\nheader {\n  background-color: white;\n  display: flex;\n  justify-content: space-evenly;\n  width: 100vw;\n  height: 10%;\n  border: solid black 2px;\n  border-radius: 10px;\n}\n\nmain {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n#content-card {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 35px;\n  margin: 35px;\n  gap: 35px;\n  border: solid black 2px;\n  border-radius: 10px;\n  background-color: white;\n  width: 60%;\n  height: auto;\n}\n#content-card section {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border: solid black 2px;\n  border-radius: 10px;\n  width: fit-content;\n  padding: 10px;\n}\n\nfooter {\n  border: solid black 2px;\n  border-radius: 10px;\n  display: flex;\n  justify-content: center;\n  background-color: white;\n}\n\n.sub-title {\n  color: red;\n}\n\nli {\n  list-style-type: none;\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://restaurantpage/./src/styles/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `body {\n  background-color: rgb(160, 160, 255);\n  width: 100vw;\n  height: 100vh;\n  height: auto;\n  overflow-x: hidden;\n}\nbody #content {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  height: 100%;\n}\n\nheader {\n  background-color: white;\n  display: flex;\n  justify-content: space-evenly;\n  width: 100vw;\n  height: 10%;\n  border: solid black 2px;\n  border-radius: 10px;\n}\n\nmain {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n#content-card {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 35px;\n  margin: 35px;\n  gap: 35px;\n  border: solid black 2px;\n  border-radius: 10px;\n  background-color: white;\n  width: 60%;\n  height: auto;\n}\n#content-card section {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border: solid black 2px;\n  border-radius: 10px;\n  width: fit-content;\n  padding: 10px;\n}\n\nfooter {\n  border: solid black 2px;\n  border-radius: 10px;\n  display: flex;\n  justify-content: center;\n  background-color: white;\n}\n\n.sub-title {\n  color: red;\n}\n\nli {\n  list-style-type: none;\n}\n\n.contact-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.contact-container .img-container {\n  width: 100%;\n  height: 100%;\n}\n.contact-container .img-container img {\n  width: 100%;\n  max-height: 100%;\n  object-fit: contain;\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://restaurantpage/./src/styles/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -110,13 +110,33 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/contact-us.js":
+/*!***************************!*\
+  !*** ./src/contact-us.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   loadContactPage: () => (/* binding */ loadContactPage)\n/* harmony export */ });\n/* harmony import */ var _assets_man_img_jpeg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/man-img.jpeg */ \"./src/assets/man-img.jpeg\");\n/* harmony import */ var _assets_waiter_img_jpeg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/waiter-img.jpeg */ \"./src/assets/waiter-img.jpeg\");\n/* harmony import */ var _assets_woman_img_jpeg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/woman-img.jpeg */ \"./src/assets/woman-img.jpeg\");\n\n\n\n\nfunction contactContent(role, contactNumber, imgURL) {\n\tconst contactContainer = document.createElement(\"div\");\n\tcontactContainer.classList.add(\"contact-container\");\n\tconst contactInfo = document.createElement(\"div\");\n\tconst imgContainer = document.createElement(\"div\");\n\tconst imgTag = new Image();\n\timgTag.src = imgURL;\n\n\tcontactInfo.innerText = `${role} || ${contactNumber}`;\n\n\timgContainer.append(imgTag);\n\timgContainer.classList.add(\"img-container\");\n\n\tcontactContainer.append(contactInfo);\n\tcontactContainer.append(imgContainer);\n\n\treturn contactContainer;\n}\n\n// Loads Entire Contact Page\nfunction loadContactPage() {\n\tconst firstContact = document.getElementById(\"Mama\");\n\tconst secondContact = document.getElementById(\"Pops\");\n\tconst thirdContact = document.getElementById(\"Junior\");\n\n\tfirstContact.append(contactContent(\"Master Chef\", \"555-555-555\", _assets_woman_img_jpeg__WEBPACK_IMPORTED_MODULE_2__));\n\tsecondContact.append(contactContent(\"Manager\", \"123-456-789\", _assets_man_img_jpeg__WEBPACK_IMPORTED_MODULE_0__));\n\tthirdContact.append(contactContent(\"Waiter\", \"515-151-515\", _assets_waiter_img_jpeg__WEBPACK_IMPORTED_MODULE_1__));\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/contact-us.js?");
+
+/***/ }),
+
+/***/ "./src/header-footer.js":
+/*!******************************!*\
+  !*** ./src/header-footer.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   loadFooter: () => (/* binding */ loadFooter),\n/* harmony export */   loadHeader: () => (/* binding */ loadHeader)\n/* harmony export */ });\nconst content = document.getElementById(\"content\");\n\n// Creates the Header\nfunction headerComponent(...titleNames) {\n\tconst header = document.createElement(\"header\");\n\n\tfor (let i = 0; i < titleNames.length; i++) {\n\t\tlet title = document.createElement(\"h1\");\n\t\ttitle.innerText = titleNames[i];\n\t\theader.append(title);\n\t}\n\n\treturn header;\n}\n\nfunction loadHeader() {\n\tcontent.append(headerComponent(\"Home\", \"Menu\", \"Contact Us\"));\n}\n\nfunction footerComponent() {\n\tconst footer = document.createElement(\"footer\");\n\tfooter.innerText = \"Site Created By: Jack Sebben\";\n\treturn footer;\n}\n\nfunction loadFooter() {\n\tcontent.append(footerComponent());\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/header-footer.js?");
+
+/***/ }),
+
 /***/ "./src/homepage.js":
 /*!*************************!*\
   !*** ./src/homepage.js ***!
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   contentCardComponent: () => (/* binding */ contentCardComponent),\n/* harmony export */   directionsContent: () => (/* binding */ directionsContent),\n/* harmony export */   hoursContent: () => (/* binding */ hoursContent),\n/* harmony export */   whoAreWeContent: () => (/* binding */ whoAreWeContent)\n/* harmony export */ });\n// Creates a content-card with multiple sections, with sub-titles\nfunction contentCardComponent(...sectionNames) {\n\t// Creates Content-Card:\n\tconst contentCard = document.createElement(\"div\");\n\tcontentCard.id = \"content-card\";\n\n\tfor (let i = 0; i < sectionNames.length; i++) {\n\t\t// Creates a Section for Content Card:\n\t\tlet section = document.createElement(\"section\");\n\t\tsection.id = sectionNames[i].split(\" \").join(\"\");\n\n\t\t// Creates a Subtitle for Section:\n\t\tlet subTitle = document.createElement(\"h2\");\n\t\tsubTitle.classList.add(\"sub-title\");\n\t\tsubTitle.innerText = sectionNames[i];\n\t\tsection.append(subTitle);\n\n\t\tcontentCard.append(section);\n\t}\n\n\treturn contentCard;\n}\n\n// Who Are We Section:\nfunction whoAreWeContent() {\n\tlet paragraph = document.createElement(\"p\");\n\tparagraph.innerText =\n\t\t\"Welcome to Rusty-Runts! Here we serve up the best home cookin' in all of Ontario. After 15 years in the business of serving up breakfast, we can assure you the our: world-famous pancakes, waffles and pastries ; top rated, 5 star hospitality ; and vibes will not dissapoint.\";\n\n\treturn paragraph;\n}\n\n// Hours Section:\nlet hours = [\n\t{\n\t\tdays: \"Monday - Thursday\",\n\t\thours: \"9:30AM - 8PM\",\n\t},\n\t{\n\t\tdays: \"Friday\",\n\t\thours: \"9:30AM - 1:30PM\",\n\t},\n\t{\n\t\tdays: \"Saturday & Sunday\",\n\t\thours: \"Closed\",\n\t},\n];\n\nfunction hoursContent() {\n\tlet hoursContainer = document.createElement(\"ul\");\n\n\tfor (let i = 0; i < hours.length; i++) {\n\t\tlet hoursItem = document.createElement(\"li\");\n\t\thoursItem.classList.add(\"hours-Item\");\n\t\thoursItem.innerText = \"👉 \" + `${hours[i].days} || ${hours[i].hours}`;\n\t\thoursContainer.append(hoursItem);\n\t}\n\n\treturn hoursContainer;\n}\n\n// Directions Section:\nfunction directionsContent() {\n\tlet paragraph = document.createElement(\"p\");\n\tparagraph.innerText = \"Road 123, Toronto, Ontario\";\n\n\treturn paragraph;\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/homepage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   loadHomePage: () => (/* binding */ loadHomePage)\n/* harmony export */ });\n// Who Are We Section:\nfunction whoAreWeContent() {\n\tlet paragraph = document.createElement(\"p\");\n\tparagraph.innerText =\n\t\t\"Welcome to Rusty-Runts! Here we serve up the best home cookin' in all of Ontario. After 15 years in the business of serving up breakfast, we can assure you the our: world-famous pancakes, waffles and pastries ; top rated, 5 star hospitality ; and vibes will not dissapoint.\";\n\n\treturn paragraph;\n}\n\n// Hours Section:\nlet hours = [\n\t{\n\t\tdays: \"Monday - Thursday\",\n\t\thours: \"9:30AM - 8PM\",\n\t},\n\t{\n\t\tdays: \"Friday\",\n\t\thours: \"9:30AM - 1:30PM\",\n\t},\n\t{\n\t\tdays: \"Saturday & Sunday\",\n\t\thours: \"Closed\",\n\t},\n];\n\nfunction hoursContent() {\n\tlet hoursContainer = document.createElement(\"ul\");\n\n\tfor (let i = 0; i < hours.length; i++) {\n\t\tlet hoursItem = document.createElement(\"li\");\n\t\thoursItem.classList.add(\"hours-Item\");\n\t\thoursItem.innerText = \"👉 \" + `${hours[i].days} || ${hours[i].hours}`;\n\t\thoursContainer.append(hoursItem);\n\t}\n\n\treturn hoursContainer;\n}\n\n// Directions Section:\nfunction directionsContent() {\n\tlet paragraph = document.createElement(\"p\");\n\tparagraph.innerText = \"Road 123, Toronto, Ontario\";\n\n\treturn paragraph;\n}\n\n// Loads Entire Homepage\nfunction loadHomePage() {\n\tconst whoAreWeSection = document.getElementById(\"WhoAreWe?\");\n\tconst hoursSection = document.getElementById(\"Hours\");\n\tconst directionsSection = document.getElementById(\"Directions\");\n\n\twhoAreWeSection.append(whoAreWeContent());\n\thoursSection.append(hoursContent());\n\tdirectionsSection.append(directionsContent());\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/homepage.js?");
 
 /***/ }),
 
@@ -126,7 +146,37 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./homepage */ \"./src/homepage.js\");\n\n\n\n\nconst content = document.getElementById(\"content\");\n\nfunction headerComponent(...titleNames) {\n\tconst header = document.createElement(\"header\");\n\n\tfor (let i = 0; i < titleNames.length; i++) {\n\t\tlet title = document.createElement(\"h1\");\n\t\ttitle.innerText = titleNames[i];\n\t\theader.append(title);\n\t}\n\n\treturn header;\n}\n\ncontent.append(headerComponent(\"Home\", \"Menu\", \"About\"));\n\n// <-----HOME PAGE-----> //\n\ncontent.append(\n\t(0,_homepage__WEBPACK_IMPORTED_MODULE_1__.contentCardComponent)(\"Rusty-Runts\", \"Who Are We?\", \"Hours\", \"Directions\")\n);\n\nconst whoAreWeSection = document.getElementById(\"WhoAreWe?\");\nconst hoursSection = document.getElementById(\"Hours\");\nconst directionsSection = document.getElementById(\"Directions\");\n\nwhoAreWeSection.append((0,_homepage__WEBPACK_IMPORTED_MODULE_1__.whoAreWeContent)());\nhoursSection.append((0,_homepage__WEBPACK_IMPORTED_MODULE_1__.hoursContent)());\ndirectionsSection.append((0,_homepage__WEBPACK_IMPORTED_MODULE_1__.directionsContent)());\n\n\n//# sourceURL=webpack://restaurantpage/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./homepage */ \"./src/homepage.js\");\n/* harmony import */ var _header_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header-footer */ \"./src/header-footer.js\");\n/* harmony import */ var _contact_us__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./contact-us */ \"./src/contact-us.js\");\n\n\n\n\n\nconst homeSectionNames = [\"Rusty-Runts\", \"Who Are We?\", \"Hours\", \"Directions\"];\nconst contactSectionNames = [\"Contact Us\", \"Mama\", \"Pops\", \"Junior\"];\n\n// Creates a content-card with multiple sections, with sub-titles\nfunction contentCardComponent(sectionNames) {\n\t// Creates Content-Card:\n\tconst contentCard = document.createElement(\"div\");\n\tcontentCard.id = \"content-card\";\n\n\tfor (let i = 0; i < sectionNames.length; i++) {\n\t\t// Creates a Section for Content Card:\n\t\tlet section = document.createElement(\"section\");\n\t\tsection.id = sectionNames[i].split(\" \").join(\"\");\n\n\t\t// Creates a Subtitle for Section:\n\t\tlet subTitle = document.createElement(\"h2\");\n\t\tsubTitle.classList.add(\"sub-title\");\n\t\tsubTitle.innerText = sectionNames[i];\n\t\tsection.append(subTitle);\n\n\t\tcontentCard.append(section);\n\t}\n\n\treturn contentCard;\n}\n\nfunction renderHomePage() {\n\t(0,_header_footer__WEBPACK_IMPORTED_MODULE_2__.loadHeader)();\n\tcontent.append(contentCardComponent(homeSectionNames));\n\t(0,_homepage__WEBPACK_IMPORTED_MODULE_1__.loadHomePage)();\n\t(0,_header_footer__WEBPACK_IMPORTED_MODULE_2__.loadFooter)();\n}\n\nfunction renderContactPage() {\n\t(0,_header_footer__WEBPACK_IMPORTED_MODULE_2__.loadHeader)();\n\tcontent.append(contentCardComponent(contactSectionNames));\n\t(0,_contact_us__WEBPACK_IMPORTED_MODULE_3__.loadContactPage)();\n\t(0,_header_footer__WEBPACK_IMPORTED_MODULE_2__.loadFooter)();\n}\n\n\n//# sourceURL=webpack://restaurantpage/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/assets/man-img.jpeg":
+/*!*********************************!*\
+  !*** ./src/assets/man-img.jpeg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"man-img.jpeg\";\n\n//# sourceURL=webpack://restaurantpage/./src/assets/man-img.jpeg?");
+
+/***/ }),
+
+/***/ "./src/assets/waiter-img.jpeg":
+/*!************************************!*\
+  !*** ./src/assets/waiter-img.jpeg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"waiter-img.jpeg\";\n\n//# sourceURL=webpack://restaurantpage/./src/assets/waiter-img.jpeg?");
+
+/***/ }),
+
+/***/ "./src/assets/woman-img.jpeg":
+/*!***********************************!*\
+  !*** ./src/assets/woman-img.jpeg ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"woman-img.jpeg\";\n\n//# sourceURL=webpack://restaurantpage/./src/assets/woman-img.jpeg?");
 
 /***/ })
 
@@ -181,6 +231,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -195,6 +257,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

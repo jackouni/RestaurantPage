@@ -1,26 +1,3 @@
-// Creates a content-card with multiple sections, with sub-titles
-function contentCardComponent(...sectionNames) {
-	// Creates Content-Card:
-	const contentCard = document.createElement("div");
-	contentCard.id = "content-card";
-
-	for (let i = 0; i < sectionNames.length; i++) {
-		// Creates a Section for Content Card:
-		let section = document.createElement("section");
-		section.id = sectionNames[i].split(" ").join("");
-
-		// Creates a Subtitle for Section:
-		let subTitle = document.createElement("h2");
-		subTitle.classList.add("sub-title");
-		subTitle.innerText = sectionNames[i];
-		section.append(subTitle);
-
-		contentCard.append(section);
-	}
-
-	return contentCard;
-}
-
 // Who Are We Section:
 function whoAreWeContent() {
 	let paragraph = document.createElement("p");
@@ -67,9 +44,15 @@ function directionsContent() {
 	return paragraph;
 }
 
-export {
-	directionsContent,
-	hoursContent,
-	whoAreWeContent,
-	contentCardComponent,
-};
+// Loads Entire Homepage
+function loadHomePage() {
+	const whoAreWeSection = document.getElementById("WhoAreWe?");
+	const hoursSection = document.getElementById("Hours");
+	const directionsSection = document.getElementById("Directions");
+
+	whoAreWeSection.append(whoAreWeContent());
+	hoursSection.append(hoursContent());
+	directionsSection.append(directionsContent());
+}
+
+export { loadHomePage };

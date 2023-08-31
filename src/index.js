@@ -1,38 +1,44 @@
 import "./styles/main.scss";
+import { loadHomePage } from "./homepage";
+import { loadHeader, loadFooter } from "./header-footer";
+import { loadContactPage } from "./contact-us";
 
-import {
-	directionsContent,
-	hoursContent,
-	whoAreWeContent,
-	contentCardComponent,
-} from "./homepage";
+const homeSectionNames = ["Rusty-Runts", "Who Are We?", "Hours", "Directions"];
+const contactSectionNames = ["Contact Us", "Mama", "Pops", "Junior"];
 
-const content = document.getElementById("content");
+// Creates a content-card with multiple sections, with sub-titles
+function contentCardComponent(sectionNames) {
+	// Creates Content-Card:
+	const contentCard = document.createElement("div");
+	contentCard.id = "content-card";
 
-function headerComponent(...titleNames) {
-	const header = document.createElement("header");
+	for (let i = 0; i < sectionNames.length; i++) {
+		// Creates a Section for Content Card:
+		let section = document.createElement("section");
+		section.id = sectionNames[i].split(" ").join("");
 
-	for (let i = 0; i < titleNames.length; i++) {
-		let title = document.createElement("h1");
-		title.innerText = titleNames[i];
-		header.append(title);
+		// Creates a Subtitle for Section:
+		let subTitle = document.createElement("h2");
+		subTitle.classList.add("sub-title");
+		subTitle.innerText = sectionNames[i];
+		section.append(subTitle);
+
+		contentCard.append(section);
 	}
 
-	return header;
+	return contentCard;
 }
 
-content.append(headerComponent("Home", "Menu", "About"));
+function renderHomePage() {
+	loadHeader();
+	content.append(contentCardComponent(homeSectionNames));
+	loadHomePage();
+	loadFooter();
+}
 
-// <-----HOME PAGE-----> //
-
-content.append(
-	contentCardComponent("Rusty-Runts", "Who Are We?", "Hours", "Directions")
-);
-
-const whoAreWeSection = document.getElementById("WhoAreWe?");
-const hoursSection = document.getElementById("Hours");
-const directionsSection = document.getElementById("Directions");
-
-whoAreWeSection.append(whoAreWeContent());
-hoursSection.append(hoursContent());
-directionsSection.append(directionsContent());
+function renderContactPage() {
+	loadHeader();
+	content.append(contentCardComponent(contactSectionNames));
+	loadContactPage();
+	loadFooter();
+}

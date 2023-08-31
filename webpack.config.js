@@ -8,12 +8,17 @@ module.exports = {
 		filename: "bundle.js",
 		path: path.resolve(__dirname, "dist"),
 		clean: true,
+		assetModuleFilename: "[name][ext]",
 	},
 	module: {
 		rules: [
 			{
 				test: /\.scss$/,
 				use: ["style-loader", "css-loader", "sass-loader"],
+			},
+			{
+				test: /\.(png|svg|jpg|jpeg|gif)$/i,
+				type: "asset/resource",
 			},
 		],
 	},
