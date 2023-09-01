@@ -44,7 +44,7 @@ main {
 	@include flex-column;
 }
 
-#content-card {
+.content-card {
 	@include flex-column;
 	@include even-spacings;
 	@include borders;

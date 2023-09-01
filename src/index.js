@@ -2,11 +2,13 @@ import "./styles/main.scss";
 import { loadHomePage } from "./homepage";
 import { loadHeader, loadFooter } from "./header-footer";
 import { loadContactPage } from "./contact-us";
+import { contentCardComponent } from "./components";
+import { menuCardComponents, menuSectionComponents } from "./menu";
 
 const homeSectionNames = ["Rusty-Runts", "Who Are We?", "Hours", "Directions"];
 const contactSectionNames = ["Contact Us", "Mama", "Pops", "Junior"];
 
-// Creates a content-card with multiple sections, with sub-titles
+/* // Creates a content-card with multiple sections, with sub-titles (this is a UI pattern for each page).
 function contentCardComponent(sectionNames) {
 	// Creates Content-Card:
 	const contentCard = document.createElement("div");
@@ -28,7 +30,7 @@ function contentCardComponent(sectionNames) {
 
 	return contentCard;
 }
-
+ */
 function renderHomePage() {
 	loadHeader();
 	content.append(contentCardComponent(homeSectionNames));
@@ -42,3 +44,5 @@ function renderContactPage() {
 	loadContactPage();
 	loadFooter();
 }
+
+content.append(contentCardComponent("Mains"));
