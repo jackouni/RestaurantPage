@@ -136,18 +136,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   contentCardComponent: () => (/* binding */ contentCardComponent)\n/* harmony export */ });\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n\n\n// Creates a content-card with Title\nfunction contentCardComponent(cardTitle) {\n\tconst contentCard = document.createElement(\"div\");\n\tcontentCard.classList.add(\"content-card\");\n\n\tconst title = document.createElement(\"h2\");\n\ttitle.classList.add(\"content-title\");\n\ttitle.innerText = lodash__WEBPACK_IMPORTED_MODULE_0___default().upperFirst(cardTitle);\n\n\tcontentCard.append(title);\n\n\treturn contentCard;\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/components.js?");
-
-/***/ }),
-
-/***/ "./src/contact-us.js":
-/*!***************************!*\
-  !*** ./src/contact-us.js ***!
-  \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   loadContactPage: () => (/* binding */ loadContactPage)\n/* harmony export */ });\n/* harmony import */ var _assets_man_img_jpeg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/man-img.jpeg */ \"./src/assets/man-img.jpeg\");\n/* harmony import */ var _assets_waiter_img_jpeg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/waiter-img.jpeg */ \"./src/assets/waiter-img.jpeg\");\n/* harmony import */ var _assets_woman_img_jpeg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/woman-img.jpeg */ \"./src/assets/woman-img.jpeg\");\n\n\n\n\nfunction contactContent(role, contactNumber, imgURL) {\n\tconst contactContainer = document.createElement(\"div\");\n\tcontactContainer.classList.add(\"contact-container\");\n\tconst contactInfo = document.createElement(\"div\");\n\tconst imgContainer = document.createElement(\"div\");\n\tconst imgTag = new Image();\n\timgTag.src = imgURL;\n\n\tcontactInfo.innerText = `${role} || ${contactNumber}`;\n\n\timgContainer.append(imgTag);\n\timgContainer.classList.add(\"img-container\");\n\n\tcontactContainer.append(contactInfo);\n\tcontactContainer.append(imgContainer);\n\n\treturn contactContainer;\n}\n\n// Loads Entire Contact Page\nfunction loadContactPage() {\n\tconst firstContact = document.getElementById(\"Mama\");\n\tconst secondContact = document.getElementById(\"Pops\");\n\tconst thirdContact = document.getElementById(\"Junior\");\n\n\tfirstContact.append(contactContent(\"Master Chef\", \"555-555-555\", _assets_woman_img_jpeg__WEBPACK_IMPORTED_MODULE_2__));\n\tsecondContact.append(contactContent(\"Manager\", \"123-456-789\", _assets_man_img_jpeg__WEBPACK_IMPORTED_MODULE_0__));\n\tthirdContact.append(contactContent(\"Waiter\", \"515-151-515\", _assets_waiter_img_jpeg__WEBPACK_IMPORTED_MODULE_1__));\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/contact-us.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   contentCardComponent: () => (/* binding */ contentCardComponent),\n/* harmony export */   paragraphComponent: () => (/* binding */ paragraphComponent),\n/* harmony export */   sectionComponent: () => (/* binding */ sectionComponent)\n/* harmony export */ });\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n\n\n// Creates a Content-Card with a Title\nfunction contentCardComponent(cardTitle) {\n\tconst contentCard = document.createElement(\"div\");\n\tcontentCard.classList.add(\"content-card\");\n\tcontentCard.id = `${cardTitle}-card`;\n\n\tconst title = document.createElement(\"h2\");\n\ttitle.classList.add(\"content-title\");\n\ttitle.innerText = lodash__WEBPACK_IMPORTED_MODULE_0___default().upperFirst(cardTitle);\n\n\tcontentCard.append(title);\n\n\treturn contentCard;\n}\n\nfunction sectionComponent(sectionTitle) {\n\tlet section = document.createElement(\"section\");\n\tlet title = document.createElement(\"h3\");\n\n\ttitle.innerText = lodash__WEBPACK_IMPORTED_MODULE_0___default().upperFirst(sectionTitle);\n\n\tsection.append(title);\n\n\treturn section;\n}\n\nfunction paragraphComponent(text) {\n\tlet paragraph = document.createElement(\"p\");\n\tparagraph.innerText = lodash__WEBPACK_IMPORTED_MODULE_0___default().upperFirst(text);\n\n\treturn paragraph;\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/components.js?");
 
 /***/ }),
 
@@ -158,7 +147,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   loadFooter: () => (/* binding */ loadFooter),\n/* harmony export */   loadHeader: () => (/* binding */ loadHeader)\n/* harmony export */ });\nconst content = document.getElementById(\"content\");\n\n// Creates the Header\nfunction headerComponent(...titleNames) {\n\tconst header = document.createElement(\"header\");\n\n\tfor (let i = 0; i < titleNames.length; i++) {\n\t\tlet title = document.createElement(\"h1\");\n\t\ttitle.innerText = titleNames[i];\n\t\theader.append(title);\n\t}\n\n\treturn header;\n}\n\nfunction loadHeader() {\n\tcontent.append(headerComponent(\"Home\", \"Menu\", \"Contact Us\"));\n}\n\nfunction footerComponent() {\n\tconst footer = document.createElement(\"footer\");\n\tfooter.innerText = \"Site Created By: Jack Sebben\";\n\treturn footer;\n}\n\nfunction loadFooter() {\n\tcontent.append(footerComponent());\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/header-footer.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   loadFooter: () => (/* binding */ loadFooter),\n/* harmony export */   loadHeader: () => (/* binding */ loadHeader)\n/* harmony export */ });\nconst content = document.getElementById(\"content\");\n\n// Creates the Header\nfunction headerComponent(...titleNames) {\n\tconst header = document.createElement(\"header\");\n\n\tfor (let i = 0; i < titleNames.length; i++) {\n\t\tlet title = document.createElement(\"h1\");\n\t\ttitle.innerText = titleNames[i];\n\t\theader.append(title);\n\t}\n\n\treturn header;\n}\n\nfunction loadHeader() {\n\treturn headerComponent(\"Home\", \"Menu\", \"Contact Us\");\n}\n\nfunction loadFooter() {\n\tconst footer = document.createElement(\"footer\");\n\tfooter.innerText = \"Site Created By: Jack Sebben\";\n\treturn footer;\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/header-footer.js?");
 
 /***/ }),
 
@@ -169,7 +158,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   loadHomePage: () => (/* binding */ loadHomePage)\n/* harmony export */ });\n// Who Are We Section:\nfunction whoAreWeContent() {\n\tlet paragraph = document.createElement(\"p\");\n\tparagraph.innerText =\n\t\t\"Welcome to Rusty-Runts! Here we serve up the best home cookin' in all of Ontario. After 15 years in the business of serving up breakfast, we can assure you the our: world-famous pancakes, waffles and pastries ; top rated, 5 star hospitality ; and vibes will not dissapoint.\";\n\n\treturn paragraph;\n}\n\n// Hours Section:\nlet hours = [\n\t{\n\t\tdays: \"Monday - Thursday\",\n\t\thours: \"9:30AM - 8PM\",\n\t},\n\t{\n\t\tdays: \"Friday\",\n\t\thours: \"9:30AM - 1:30PM\",\n\t},\n\t{\n\t\tdays: \"Saturday & Sunday\",\n\t\thours: \"Closed\",\n\t},\n];\n\nfunction hoursContent() {\n\tlet hoursContainer = document.createElement(\"ul\");\n\n\tfor (let i = 0; i < hours.length; i++) {\n\t\tlet hoursItem = document.createElement(\"li\");\n\t\thoursItem.classList.add(\"hours-Item\");\n\t\thoursItem.innerText = \"👉 \" + `${hours[i].days} || ${hours[i].hours}`;\n\t\thoursContainer.append(hoursItem);\n\t}\n\n\treturn hoursContainer;\n}\n\n// Directions Section:\nfunction directionsContent() {\n\tlet paragraph = document.createElement(\"p\");\n\tparagraph.innerText = \"Road 123, Toronto, Ontario\";\n\n\treturn paragraph;\n}\n\n// Loads Entire Homepage\nfunction loadHomePage() {\n\tconst whoAreWeSection = document.getElementById(\"WhoAreWe?\");\n\tconst hoursSection = document.getElementById(\"Hours\");\n\tconst directionsSection = document.getElementById(\"Directions\");\n\n\twhoAreWeSection.append(whoAreWeContent());\n\thoursSection.append(hoursContent());\n\tdirectionsSection.append(directionsContent());\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/homepage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   loadHomePage: () => (/* binding */ loadHomePage)\n/* harmony export */ });\n/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components */ \"./src/components.js\");\n\n\nconst about =\n\t\"Welcome to Rusty-Runts! Here we serve up the best home cookin' in all of Ontario. After 15 years in the business of serving up breakfast, we can assure you the our: world-famous pancakes, waffles and pastries ; top rated, 5 star hospitality ; and vibes will not dissapoint.\";\n\nconst directions = \"Road 123, Toronto, Ontario\";\n\nconst hours = [\n\t{\n\t\tdays: \"Monday - Thursday\",\n\t\thours: \"9:30AM - 8PM\",\n\t},\n\t{\n\t\tdays: \"Friday\",\n\t\thours: \"9:30AM - 1:30PM\",\n\t},\n\t{\n\t\tdays: \"Saturday & Sunday\",\n\t\thours: \"Closed\",\n\t},\n];\n\nfunction hoursContainerComponent() {\n\tlet hoursContainer = document.createElement(\"div\");\n\thoursContainer.id = \"hours-container\";\n\n\tfor (let i = 0; i < hours.length; i++) {\n\t\tlet hoursItem = (0,_components__WEBPACK_IMPORTED_MODULE_0__.paragraphComponent)(\n\t\t\t`👉 ${hours[i].days} || ${hours[i].hours}`\n\t\t);\n\t\thoursItem.classList.add(\"hours-item\");\n\t\thoursContainer.append(hoursItem);\n\t}\n\n\treturn hoursContainer;\n}\n\n// Loads Entire Homepage\nfunction loadHomePage() {\n\tlet homeCard = (0,_components__WEBPACK_IMPORTED_MODULE_0__.contentCardComponent)(\"Welcom to Rusty-Runts!\");\n\tlet firstSection = (0,_components__WEBPACK_IMPORTED_MODULE_0__.sectionComponent)(\"Who Are We?\");\n\tlet secondSection = (0,_components__WEBPACK_IMPORTED_MODULE_0__.sectionComponent)(\"Hours\");\n\tlet thirdSection = (0,_components__WEBPACK_IMPORTED_MODULE_0__.sectionComponent)(\"Directions\");\n\n\tfirstSection.append((0,_components__WEBPACK_IMPORTED_MODULE_0__.paragraphComponent)(about));\n\tsecondSection.append(hoursContainerComponent());\n\tthirdSection.append((0,_components__WEBPACK_IMPORTED_MODULE_0__.paragraphComponent)(directions));\n\n\thomeCard.append(firstSection);\n\thomeCard.append(secondSection);\n\thomeCard.append(thirdSection);\n\n\treturn homeCard;\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/homepage.js?");
 
 /***/ }),
 
@@ -180,7 +169,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./homepage */ \"./src/homepage.js\");\n/* harmony import */ var _header_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header-footer */ \"./src/header-footer.js\");\n/* harmony import */ var _contact_us__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./contact-us */ \"./src/contact-us.js\");\n/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components */ \"./src/components.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\n\n\n\n\nconst homeSectionNames = [\"Rusty-Runts\", \"Who Are We?\", \"Hours\", \"Directions\"];\nconst contactSectionNames = [\"Contact Us\", \"Mama\", \"Pops\", \"Junior\"];\n\n/* // Creates a content-card with multiple sections, with sub-titles (this is a UI pattern for each page).\nfunction contentCardComponent(sectionNames) {\n\t// Creates Content-Card:\n\tconst contentCard = document.createElement(\"div\");\n\tcontentCard.id = \"content-card\";\n\n\tfor (let i = 0; i < sectionNames.length; i++) {\n\t\t// Creates a Section for Content Card:\n\t\tlet section = document.createElement(\"section\");\n\t\tsection.id = sectionNames[i].split(\" \").join(\"\");\n\n\t\t// Creates a Subtitle for Section:\n\t\tlet subTitle = document.createElement(\"h2\");\n\t\tsubTitle.classList.add(\"sub-title\");\n\t\tsubTitle.innerText = sectionNames[i];\n\t\tsection.append(subTitle);\n\n\t\tcontentCard.append(section);\n\t}\n\n\treturn contentCard;\n}\n */\nfunction renderHomePage() {\n\t(0,_header_footer__WEBPACK_IMPORTED_MODULE_2__.loadHeader)();\n\tcontent.append((0,_components__WEBPACK_IMPORTED_MODULE_4__.contentCardComponent)(homeSectionNames));\n\t(0,_homepage__WEBPACK_IMPORTED_MODULE_1__.loadHomePage)();\n\t(0,_header_footer__WEBPACK_IMPORTED_MODULE_2__.loadFooter)();\n}\n\nfunction renderContactPage() {\n\t(0,_header_footer__WEBPACK_IMPORTED_MODULE_2__.loadHeader)();\n\tcontent.append((0,_components__WEBPACK_IMPORTED_MODULE_4__.contentCardComponent)(contactSectionNames));\n\t(0,_contact_us__WEBPACK_IMPORTED_MODULE_3__.loadContactPage)();\n\t(0,_header_footer__WEBPACK_IMPORTED_MODULE_2__.loadFooter)();\n}\n\ncontent.append((0,_components__WEBPACK_IMPORTED_MODULE_4__.contentCardComponent)(\"Mains\"));\n\n\n//# sourceURL=webpack://restaurantpage/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./homepage */ \"./src/homepage.js\");\n/* harmony import */ var _header_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header-footer */ \"./src/header-footer.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\n\n\nconst contactSectionNames = [\"Contact Us\", \"Mama\", \"Pops\", \"Junior\"];\n\nconst content = document.getElementById(\"content\");\n\nfunction renderHeader() {\n\tcontent.append((0,_header_footer__WEBPACK_IMPORTED_MODULE_2__.loadHeader)());\n}\n\nfunction renderFooter() {\n\tcontent.append((0,_header_footer__WEBPACK_IMPORTED_MODULE_2__.loadFooter)());\n}\n\nfunction renderHomePage() {\n\tcontent.append((0,_homepage__WEBPACK_IMPORTED_MODULE_1__.loadHomePage)());\n}\n\nrenderHeader();\nrenderHomePage();\nrenderFooter();\n\n\n//# sourceURL=webpack://restaurantpage/./src/index.js?");
 
 /***/ }),
 
@@ -192,39 +181,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   menuCardComponents: () => (/* binding */ menuCardComponents),\n/* harmony export */   menuSectionComponents: () => (/* binding */ menuSectionComponents)\n/* harmony export */ });\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n\nconst menu = {\n\tmains: [\n\t\t{\n\t\t\tname: \"food1\",\n\t\t\tprice: 21,\n\t\t\timg: null,\n\t\t\tdesc: \"this is a description\",\n\t\t},\n\t\t{\n\t\t\tname: \"food2\",\n\t\t\tprice: 20,\n\t\t\timg: null,\n\t\t\tdesc: \"this is a description\",\n\t\t},\n\t\t{\n\t\t\tname: \"food3\",\n\t\t\tprice: 19,\n\t\t\timg: null,\n\t\t\tdesc: \"this is a description\",\n\t\t},\n\t],\n\tdrinks: [\n\t\t{\n\t\t\tname: \"drink1\",\n\t\t\tprice: 6,\n\t\t\timg: null,\n\t\t\tdesc: \"this is a description\",\n\t\t},\n\t\t{\n\t\t\tname: \"drink2\",\n\t\t\tprice: 7,\n\t\t\timg: null,\n\t\t\tdesc: \"this is a description\",\n\t\t},\n\t\t{\n\t\t\tname: \"drink3\",\n\t\t\tprice: 8,\n\t\t\timg: null,\n\t\t\tdesc: \"this is a description\",\n\t\t},\n\t],\n\tdeserts: [\n\t\t{\n\t\t\tname: \"yummy\",\n\t\t\tprice: 10,\n\t\t\timg: null,\n\t\t\tdesc: \"this is a description\",\n\t\t},\n\t\t{\n\t\t\tname: \"yummy2\",\n\t\t\tprice: 11,\n\t\t\timg: null,\n\t\t\tdesc: \"this is a description\",\n\t\t},\n\t\t{\n\t\t\tname: \"yummy3\",\n\t\t\tprice: 12,\n\t\t\timg: null,\n\t\t\tdesc: \"this is a description\",\n\t\t},\n\t],\n};\n\nfunction menuCardComponents() {\n\tfor (let key in menu) {\n\t\tconst contentCard = document.createElement(\"div\");\n\t\tcontentCard.classList.add(\"content-card\");\n\t\tcontentCard.id = `${key}-card`;\n\n\t\tconst subTitle = document.createElement(\"h2\");\n\t\tsubTitle.innerText = lodash__WEBPACK_IMPORTED_MODULE_0___default().upperFirst(key);\n\n\t\tcontentCard.append(subTitle);\n\t\tmenuSectionComponents();\n\t\treturn contentCard;\n\t}\n}\n\nfunction menuSectionComponents() {\n\tfor (let key in menu) {\n\t\tmenu[key].forEach((item) => {\n\t\t\tlet container = document.createElement(\"div\");\n\t\t\tlet nameAndPrice = document.createElement(\"h3\");\n\t\t\t// let imgContainer = document.createElement(\"div\");\n\t\t\tlet description = document.createElement(\"p\");\n\n\t\t\tnameAndPrice.innerText = `${lodash__WEBPACK_IMPORTED_MODULE_0___default().upperFirst(item.name)} || $${item.price}`;\n\t\t\tdescription.innerText = item.desc;\n\n\t\t\tcontainer.append(nameAndPrice);\n\t\t\tcontainer.append(description);\n\t\t});\n\t}\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/menu.js?");
-
-/***/ }),
-
-/***/ "./src/assets/man-img.jpeg":
-/*!*********************************!*\
-  !*** ./src/assets/man-img.jpeg ***!
-  \*********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"man-img.jpeg\";\n\n//# sourceURL=webpack://restaurantpage/./src/assets/man-img.jpeg?");
-
-/***/ }),
-
-/***/ "./src/assets/waiter-img.jpeg":
-/*!************************************!*\
-  !*** ./src/assets/waiter-img.jpeg ***!
-  \************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"waiter-img.jpeg\";\n\n//# sourceURL=webpack://restaurantpage/./src/assets/waiter-img.jpeg?");
-
-/***/ }),
-
-/***/ "./src/assets/woman-img.jpeg":
-/*!***********************************!*\
-  !*** ./src/assets/woman-img.jpeg ***!
-  \***********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"woman-img.jpeg\";\n\n//# sourceURL=webpack://restaurantpage/./src/assets/woman-img.jpeg?");
 
 /***/ })
 
@@ -317,29 +273,6 @@ eval("module.exports = __webpack_require__.p + \"woman-img.jpeg\";\n\n//# source
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src;
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) {
-/******/ 					var i = scripts.length - 1;
-/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
-/******/ 				}
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

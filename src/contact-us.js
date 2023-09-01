@@ -2,6 +2,12 @@ import manImg from "./assets/man-img.jpeg";
 import waiterImg from "./assets/waiter-img.jpeg";
 import womanImg from "./assets/woman-img.jpeg";
 
+import {
+	contentCardComponent,
+	paragraphComponent,
+	sectionComponent,
+} from "./components";
+
 function contactContent(role, contactNumber, imgURL) {
 	const contactContainer = document.createElement("div");
 	contactContainer.classList.add("contact-container");

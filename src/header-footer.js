@@ -14,17 +14,13 @@ function headerComponent(...titleNames) {
 }
 
 function loadHeader() {
-	content.append(headerComponent("Home", "Menu", "Contact Us"));
-}
-
-function footerComponent() {
-	const footer = document.createElement("footer");
-	footer.innerText = "Site Created By: Jack Sebben";
-	return footer;
+	return headerComponent("Home", "Menu", "Contact Us");
 }
 
 function loadFooter() {
-	content.append(footerComponent());
+	const footer = document.createElement("footer");
+	footer.innerText = "Site Created By: Jack Sebben";
+	return footer;
 }
 
 export { loadHeader, loadFooter };

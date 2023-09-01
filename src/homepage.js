@@ -1,14 +1,15 @@
-// Who Are We Section:
-function whoAreWeContent() {
-	let paragraph = document.createElement("p");
-	paragraph.innerText =
-		"Welcome to Rusty-Runts! Here we serve up the best home cookin' in all of Ontario. After 15 years in the business of serving up breakfast, we can assure you the our: world-famous pancakes, waffles and pastries ; top rated, 5 star hospitality ; and vibes will not dissapoint.";
+import {
+	contentCardComponent,
+	paragraphComponent,
+	sectionComponent,
+} from "./components";
 
-	return paragraph;
-}
+const about =
+	"Welcome to Rusty-Runts! Here we serve up the best home cookin' in all of Ontario. After 15 years in the business of serving up breakfast, we can assure you the our: world-famous pancakes, waffles and pastries ; top rated, 5 star hospitality ; and vibes will not dissapoint.";
 
-// Hours Section:
-let hours = [
+const directions = "Road 123, Toronto, Ontario";
+
+const hours = [
 	{
 		days: "Monday - Thursday",
 		hours: "9:30AM - 8PM",
@@ -23,36 +24,37 @@ let hours = [
 	},
 ];
 
-function hoursContent() {
-	let hoursContainer = document.createElement("ul");
+function hoursContainerComponent() {
+	let hoursContainer = document.createElement("div");
+	hoursContainer.id = "hours-container";
 
 	for (let i = 0; i < hours.length; i++) {
-		let hoursItem = document.createElement("li");
-		hoursItem.classList.add("hours-Item");
-		hoursItem.innerText = "👉 " + `${hours[i].days} || ${hours[i].hours}`;
+		let hoursItem = paragraphComponent(
+			`👉 ${hours[i].days} || ${hours[i].hours}`
+		);
+		hoursItem.classList.add("hours-item");
 		hoursContainer.append(hoursItem);
 	}
 
 	return hoursContainer;
 }
 
-// Directions Section:
-function directionsContent() {
-	let paragraph = document.createElement("p");
-	paragraph.innerText = "Road 123, Toronto, Ontario";
-
-	return paragraph;
-}
-
 // Loads Entire Homepage
 function loadHomePage() {
-	const whoAreWeSection = document.getElementById("WhoAreWe?");
-	const hoursSection = document.getElementById("Hours");
-	const directionsSection = document.getElementById("Directions");
+	let homeCard = contentCardComponent("Welcom to Rusty-Runts!");
+	let firstSection = sectionComponent("Who Are We?");
+	let secondSection = sectionComponent("Hours");
+	let thirdSection = sectionComponent("Directions");
 
-	whoAreWeSection.append(whoAreWeContent());
-	hoursSection.append(hoursContent());
-	directionsSection.append(directionsContent());
+	firstSection.append(paragraphComponent(about));
+	secondSection.append(hoursContainerComponent());
+	thirdSection.append(paragraphComponent(directions));
+
+	homeCard.append(firstSection);
+	homeCard.append(secondSection);
+	homeCard.append(thirdSection);
+
+	return homeCard;
 }
 
 export { loadHomePage };
