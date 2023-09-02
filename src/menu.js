@@ -1,97 +1,121 @@
+import omeletteImg from "./assets/omelette-img.jpeg";
+import pancakesImg from "./assets/pancakes-img.jpeg";
+import wafflesImg from "./assets/waffles-img.jpeg";
+import teaImg from "./assets/tea-img.jpeg";
+import lemonadeImg from "./assets/lemonade-img.jpeg";
+import coffeeImg from "./assets/coffee-img.jpeg";
+import cakeImg from "./assets/cake-img.jpeg";
+import brownieImg from "./assets/brownie-img.jpeg";
+import prettypattyImg from "./assets/prettypatty-img.jpeg";
+
 import _ from "lodash";
+import {
+	contentCardComponent,
+	paragraphComponent,
+	sectionComponent,
+} from "./components";
+
 const menu = {
 	mains: [
 		{
-			name: "food1",
+			name: "Top-Notch Omelette",
 			price: 21,
-			img: null,
+			img: omeletteImg,
 			desc: "this is a description",
 		},
 		{
-			name: "food2",
+			name: "Fluffy Pancakes",
 			price: 20,
-			img: null,
+			img: pancakesImg,
 			desc: "this is a description",
 		},
 		{
-			name: "food3",
+			name: "Belgian Waffles",
 			price: 19,
-			img: null,
+			img: wafflesImg,
 			desc: "this is a description",
 		},
 	],
 	drinks: [
 		{
-			name: "drink1",
+			name: "Mint-Lemonade",
 			price: 6,
-			img: null,
+			img: lemonadeImg,
 			desc: "this is a description",
 		},
 		{
-			name: "drink2",
+			name: "Honey Tea",
 			price: 7,
-			img: null,
+			img: teaImg,
 			desc: "this is a description",
 		},
 		{
-			name: "drink3",
+			name: "Artsy Coffee",
 			price: 8,
-			img: null,
+			img: coffeeImg,
 			desc: "this is a description",
 		},
 	],
-	deserts: [
+	desserts: [
 		{
-			name: "yummy",
+			name: "Lovely Cake",
 			price: 10,
-			img: null,
+			img: cakeImg,
 			desc: "this is a description",
 		},
 		{
-			name: "yummy2",
+			name: "Homemade Brownies",
 			price: 11,
-			img: null,
+			img: brownieImg,
 			desc: "this is a description",
 		},
 		{
-			name: "yummy3",
+			name: "Pretty Patties",
 			price: 12,
-			img: null,
+			img: prettypattyImg,
 			desc: "this is a description",
 		},
 	],
 };
 
-function menuCardComponents() {
-	for (let key in menu) {
-		const contentCard = document.createElement("div");
-		contentCard.classList.add("content-card");
-		contentCard.id = `${key}-card`;
+function menuItem(name, price, img, desc) {
+	let section = sectionComponent(`${name} ( $${price} )`);
+	let imgContainer = document.createElement("div");
+	let description = paragraphComponent(desc);
+	let newImg = new Image();
+	newImg.src = img;
 
-		const subTitle = document.createElement("h2");
-		subTitle.innerText = _.upperFirst(key);
+	imgContainer.classList.add("img-container");
 
-		contentCard.append(subTitle);
-		menuSectionComponents();
-		return contentCard;
-	}
+	imgContainer.append(newImg);
+	section.append(imgContainer);
+	section.append(description);
+
+	return section;
 }
 
-function menuSectionComponents() {
+function loadMenuPage() {
+	let wholeMenu = document.createElement("div");
+	wholeMenu.classList.add("content-card");
+
 	for (let key in menu) {
-		menu[key].forEach((item) => {
-			let container = document.createElement("div");
-			let nameAndPrice = document.createElement("h3");
-			// let imgContainer = document.createElement("div");
-			let description = document.createElement("p");
+		let menuCard = contentCardComponent(`${_.upperFirst(key)}`);
 
-			nameAndPrice.innerText = `${_.upperFirst(item.name)} || $${item.price}`;
-			description.innerText = item.desc;
+		for (let i = 0; i < menu[key].length; i++) {
+			let newMenuItem = menuItem(
+				menu[key][i].name,
+				menu[key][i].price,
+				menu[key][i].img,
+				menu[key][i].desc
+			);
 
-			container.append(nameAndPrice);
-			container.append(description);
-		});
+			menuCard.append(newMenuItem);
+		}
+
+		wholeMenu.append(menuCard);
 	}
+
+	return wholeMenu;
 }
 
-export { menuCardComponents, menuSectionComponents };
+export { loadMenuPage };

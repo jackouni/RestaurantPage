@@ -1,13 +1,17 @@
-const content = document.getElementById("content");
+// Event listener function
+import { whatPageToLoad } from "./index.js";
 
 // Creates the Header
-function headerComponent(...titleNames) {
+function headerComponent(...buttonNames) {
 	const header = document.createElement("header");
 
-	for (let i = 0; i < titleNames.length; i++) {
-		let title = document.createElement("h1");
-		title.innerText = titleNames[i];
-		header.append(title);
+	for (let i = 0; i < buttonNames.length; i++) {
+		let button = document.createElement("button");
+
+		button.innerText = buttonNames[i];
+		button.id = `${buttonNames[i].split(" ").join("-")}-btn`;
+		button.addEventListener("click", whatPageToLoad);
+		header.append(button);
 	}
 
 	return header;
@@ -17,10 +21,4 @@ function loadHeader() {
 	return headerComponent("Home", "Menu", "Contact Us");
 }
 
-function loadFooter() {
-	const footer = document.createElement("footer");
-	footer.innerText = "Site Created By: Jack Sebben";
-	return footer;
-}
-
-export { loadHeader, loadFooter };
+export { loadHeader };

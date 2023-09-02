@@ -2,40 +2,60 @@ import manImg from "./assets/man-img.jpeg";
 import waiterImg from "./assets/waiter-img.jpeg";
 import womanImg from "./assets/woman-img.jpeg";
 
-import {
-	contentCardComponent,
-	paragraphComponent,
-	sectionComponent,
-} from "./components";
+import { contentCardComponent, sectionComponent } from "./components";
 
-function contactContent(role, contactNumber, imgURL) {
-	const contactContainer = document.createElement("div");
-	contactContainer.classList.add("contact-container");
-	const contactInfo = document.createElement("div");
-	const imgContainer = document.createElement("div");
-	const imgTag = new Image();
-	imgTag.src = imgURL;
+const contacts = [
+	{
+		name: "Maman",
+		role: "Chef",
+		number: "555-555-555",
+		img: womanImg,
+	},
+	{
+		name: "Papa",
+		role: "Manager",
+		number: "123-456-789",
+		img: manImg,
+	},
+	{
+		name: "Junior",
+		role: "Waiter",
+		number: "987-654-321",
+		img: waiterImg,
+	},
+];
 
-	contactInfo.innerText = `${role} || ${contactNumber}`;
+function contactContainerComponent(name, role, number, img) {
+	let section = sectionComponent(`${name} - ${role} \n (${number})`);
+	let imgContainer = document.createElement("div");
 
-	imgContainer.append(imgTag);
-	imgContainer.classList.add("img-container");
+	imgContainer.id = `${name}-img-container`;
 
-	contactContainer.append(contactInfo);
-	contactContainer.append(imgContainer);
+	let newImg = new Image();
+	newImg.src = img;
 
-	return contactContainer;
+	imgContainer.append(newImg);
+	section.append(imgContainer);
+
+	return section;
 }
 
 // Loads Entire Contact Page
 function loadContactPage() {
-	const firstContact = document.getElementById("Mama");
-	const secondContact = document.getElementById("Pops");
-	const thirdContact = document.getElementById("Junior");
+	let contactCard = contentCardComponent("Contact Us!");
 
-	firstContact.append(contactContent("Master Chef", "555-555-555", womanImg));
-	secondContact.append(contactContent("Manager", "123-456-789", manImg));
-	thirdContact.append(contactContent("Waiter", "515-151-515", waiterImg));
+	for (let i = 0; i < contacts.length; i++) {
+		contactCard.append(
+			contactContainerComponent(
+				contacts[i].name,
+				contacts[i].role,
+				contacts[i].number,
+				contacts[i].img
+			)
+		);
+	}
+
+	return contactCard;
 }
 
 export { loadContactPage };
