@@ -47,6 +47,6 @@ function whatPageToLoad(event) {
 }
 
 appendHeader();
-appendMenuPage();
+appendHomePage();
 
 export { whatPageToLoad };

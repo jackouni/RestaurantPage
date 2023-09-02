@@ -5,7 +5,7 @@ import {
 } from "./components";
 
 const about =
-	"Welcome to Rusty-Runts! Here we serve up the best home cookin' in all of Ontario. After 15 years in the business of serving up breakfast, we can assure you the our: world-famous pancakes, waffles and pastries ; top rated, 5 star hospitality ; and vibes will not dissapoint.";
+	"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consectetur augue velit, eget elementum leo suscipit eget. Mauris viverra condimentum lacus, luctus sodales leo interdum porta. Aenean dignissim elit sed mauris efficitur semper. Sed viverra tempor diam eu fringilla. Maecenas massa erat, pulvinar et pellentesque quis, tincidunt vel dolor.";
 
 const directions = "Road 123, Toronto, Ontario";
 
@@ -41,7 +41,7 @@ function hoursContainerComponent() {
 
 // Loads Entire Homepage
 function loadHomePage() {
-	let homeCard = contentCardComponent("Welcom to Rusty-Runts!");
+	let homeCard = contentCardComponent("Welcome to Rusty-Runts!");
 	let firstSection = sectionComponent("Who Are We?");
 	let secondSection = sectionComponent("Hours");
 	let thirdSection = sectionComponent("Directions");
